@@ -1,0 +1,8 @@
+FROM rust:latest
+
+WORKDIR /usr/src/dicom
+COPY . .
+RUN cargo install --bin dicom-listener --path .
+RUN ls .
+EXPOSE 11111
+CMD ["dicom-listener"]

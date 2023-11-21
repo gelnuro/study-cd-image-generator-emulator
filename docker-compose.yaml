@@ -1,0 +1,13 @@
+services:
+  rest-listener:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.rest-listener
+    ports:
+      - 8000:8000
+  dicom-listener:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.dicom-listener
+    ports:
+      - 11111:11111

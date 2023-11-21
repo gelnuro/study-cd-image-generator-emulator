@@ -1,0 +1,8 @@
+FROM rust:latest
+
+WORKDIR /usr/src/rest
+COPY . .
+RUN cargo install --bin rest-listener --path .
+RUN ls .
+EXPOSE 8000
+CMD ["rest-listener"]
